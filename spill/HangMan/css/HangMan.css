@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+}
+#main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+}
+#header {
+    width: inherit;
+    height: 80px;
+    display: flex;
+    place-content: center;
+    background-color: darkgray;
+}
+#title {
+    margin: auto;
+}
+/*IN GAME*/
+#line-container {
+    width: inherit;
+    display: flex;
+    position: absolute;
+    top: 80%;
+    place-content: center;
+    justify-content: space-evenly;
+}
+.line {
+    border-bottom: black solid 2px;
+    width: 20px;
+    display: flex;
+    place-content: center;
+    font-size: 150%;
+    place-content: center;
+}
+#person {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    margin: auto;
+}
+#secretInput {
+    background: none;
+    border: none;
+    outline: none;
+    caret-color: rgba(0, 0, 0, 0);
+    cursor: default;
+    color: rgba(0, 0, 0, 0);
+}
+#secretInput:focus {
+    background: none;
+    border: none;
+    outline: none;
+    caret-color: rgba(0, 0, 0, 0);
+    cursor: default;
+    color: rgba(0, 0, 0, 0);
+}
+#wrongLetters {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    font-size: 200%;
+}
+#wrongLetters::before {
+    content: "Wrong Letters: ";
+}
+#attempts {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 20px;
+    font-size: 200%;
+}
+#attempts::before {
+    content: "Remaining Attemps: ";
+}
+#highscore {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    font-size: 200%;
+}
+#highscore::before {
+    content: "Highscore: ";
+}
+/*END SCREEN*/
+#popUp {
+    text-align: center;
+    font-size: 300%;
+    width: 80%;
+    height: 80%;
+    border: dotted black 2px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#message {
+    position: absolute;
+}
+#restart {
+    border: solid black 2px;
+    background-color: white;
+    width: 25%;
+    display: flex;
+    place-self: flex-end center;
+    place-content: center;
+}
+/*COLORS*/
+.red {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+.green {
+    background-color: rgba(0, 255, 0, 0.4);
+}

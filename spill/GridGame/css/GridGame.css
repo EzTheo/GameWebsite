@@ -1,0 +1,86 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*Animations*/
+@keyframes fadeOut{
+    from {
+      opacity:1;
+    }
+    to {
+      opacity:0;
+    }
+}
+@keyframes youDied{
+    from{
+
+    }
+    to{
+        
+    }
+}
+
+/*HTML Elements*/
+body{margin: 0; background-color: #273469;}
+
+/*Div Elements*/
+.menu{width: 100%; height: 100%; 
+    background-color: #1E2749;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50vw);
+    grid-template-rows: repeat(auto-fill, 100vh);
+}
+.container{
+    width: 100%; height: 100%;
+    background-color: #1E2749;
+    display: grid;
+}
+.grid{width: 100%; height: 100%;
+    background-color: white; opacity: 0;
+    object-fit: cover; place-self: center;}
+.blob{height: 25%; aspect-ratio: 1/1;
+    background-color: white; filter: drop-shadow(0 0 1rem white);
+    object-fit: cover; place-self: center;
+    border-radius: 50%;}
+.showcaseWindow{height: 100%; aspect-ratio: 1/1;
+    background-image: url("../assets/SpriteSheet.png");
+    filter: drop-shadow(0 0 1rem white);
+    place-self: center;
+    background-size: auto 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;}
+
+/*Img Elements*/
+.ghost{height: 100%; aspect-ratio: 1/1;
+    filter: drop-shadow(0 0 0.75rem white);
+    object-fit: cover; place-self: center;}
+    
+/*P Elements*/
+.pointCounter{top:0; left: 24px; font-size: 150%;
+    color: whitesmoke; filter: drop-shadow(0 0 0.75rem white);
+    font-family:'Press Start 2P',cursive;
+    position: absolute;}
+.pointCounter::before{content: "Points: ";}
+.startButton{filter: drop-shadow(0 0 1rem white); color: white; font-family:'Press Start 2P',cursive; font-size: 500%; right: 50px; top: 300px; position: absolute;}
+.gridGame{filter: drop-shadow(0 0 1rem white); color: white; font-family:'Press Start 2P',cursive; font-size: 800%; position: absolute; right: 50px; top: 0px;}
+.timer{top:0; left:50%; transform: translateX(-50%); font-size: 150%;
+    color: whitesmoke; filter: drop-shadow(0 0 0.75rem white);
+    font-family:'Press Start 2P',cursive;
+    position: absolute;}
+.timer:before{content:"Time: ";}
+.highScore{top:0; right:24px; font-size: 150%;
+    color: whitesmoke; filter: drop-shadow(0 0 0.75rem white);
+    font-family:'Press Start 2P',cursive;
+    position: absolute;}
+.highScore:before{content:"High Score: "}
+
+/*Media Queries*/
+@media only screen and (max-width: 1366px) {
+    .startButton{font-size: 300%; top: 150px;}
+    .gridGame{font-size: 500%;}
+}
+@media only screen and (max-width: 1024px) {
+    .startButton{font-size: 200%; top: 100px;}
+    .gridGame{font-size: 300%;}
+    .pointCounter{font-size: 75%;}
+}
+/*sett minimum bredde og høyde på winduet til mobil versjon. Så man ikke kan mose alt til en liten klump*/

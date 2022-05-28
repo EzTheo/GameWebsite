@@ -1,0 +1,102 @@
+/*HTML*/
+body {
+    margin: 0;
+    display: grid;
+    background-attachment: fixed;
+}
+body.light {
+    background-image: url(../assets/light_background.png);
+}
+body.dark {
+    background-image: url(../assets/dark_background.png);
+}
+#header {
+    width: 100%;
+    height: 100px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    grid-template-columns: 100px 1fr;
+}
+#header.light {
+    background-image: url(../assets/logo.png);
+}
+#header.dark {
+    background-image: url(../assets/logo_inverted.png);
+}
+#dropdown {
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    object-fit: contain;
+}
+#dropdown.light {
+    content: url(../assets/dropdown_unactive.png);
+}
+#dropdown.dark {
+    content: url(../assets/dropdown_unactive_inverted.png);
+}
+#dropdown.light.active {
+    content: url(../assets/dropdown_active.png);
+}
+#dropdown.dark.active {
+    content: url(../assets/dropdown_active_inverted.png);
+}
+#dropdown-menu {
+    height: auto;
+    width: 100px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    left: 0;
+    top: 100px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.link {
+    place-content: center;
+    width: inherit;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+#prev1 {
+    aspect-ratio: 16/9;
+    width: 50%;
+    border-width: 1px;
+    border-style: solid;
+    grid-row: 2;
+    grid-column: 1;
+    place-self: center;
+    background-image: url(../assets/HangMan_Prev.png);
+}
+#prev2 {
+    aspect-ratio: 16/9;
+    width: 50%;
+    border-width: 1px;
+    border-style: solid;
+    grid-row: 2;
+    grid-column: 2;
+    place-self: center;
+    background-image: url(../assets/GridGame_prev.png);
+}
+
+/*Themes*/
+.light {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: black;
+    color: black;
+}
+.dark {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: white;
+    color: white;
+}
